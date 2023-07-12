@@ -72,5 +72,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 
-## Youtube =  https://github.com/academind/nestjs-introduction/tree/01-introduction
+Sources :
+Youtube =  https://github.com/academind/nestjs-introduction/tree/01-introduction
+Git = https://github.com/academind/nestjs-introduction/blob/01-introduction/README.md
+
 
