@@ -1,10 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-
 import { Product } from './product.model';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { ProductsModule } from './products.module';
-import { response } from 'express';
+
 
 @Injectable()
 export class ProductsService {
@@ -25,7 +23,6 @@ export class ProductsService {
     console.log(result);
     return result.id as string;
   }
-
 
 
   async getProducts() {
