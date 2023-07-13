@@ -39,8 +39,6 @@ export class ProductsController {
   }
 
 
-
-
   @Get(':id')
   getProduct(@Param('id') prodId: string) {
     return this.productsService.getSingleProduct(prodId);
@@ -58,8 +56,6 @@ export class ProductsController {
     await this.productsService.updateProduct(prodId, prodTitle, prodDesc, prodPrice);
     return null;
   }
-
-
 
 
   @Delete(':id')
