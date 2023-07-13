@@ -64,7 +64,8 @@ let ProductsService = exports.ProductsService = class ProductsService {
         updatedProduct.save();
     }
     async deleteProduct(prodId) {
-        await this.productModel.deleteOne({ _id: prodId }).exec();
+        const result = await this.productModel.deleteOne({ _id: prodId }).exec();
+        console.log(result);
     }
     async findProduct(id) {
         let product;

@@ -68,7 +68,8 @@ export class ProductsService {
 
 
   async deleteProduct(prodId: string) {
-      await this.productModel.deleteOne({_id:prodId}).exec();
+     const result =  await this.productModel.deleteOne({_id:prodId}).exec();
+     console.log(result);
   }
 
 
