@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"A Test\",\n    \"description\": \"This is a first product\",\n    \"price\": 29.99\n}",
+					"raw": "{\n    \"title\": \"A First\",\n    \"description\": \"This is a first product\",\n    \"price\": 10.11\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"second\",\n    \"description\": \"The second test of Tara\",\n    \"price\": 2\n}",
+					"raw": "{\n    \"title\": \"second\",\n    \"description\": \"The second product\",\n    \"price\": 20\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -80,7 +80,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/products/64afa2faf67feeb99f752f25",
+					"raw": "http://localhost:4000/products/64afbd4e8e2dae322343a4bd",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -88,7 +88,7 @@
 					"port": "4000",
 					"path": [
 						"products",
-						"64afa2faf67feeb99f752f25"
+						"64afbd4e8e2dae322343a4bd"
 					]
 				}
 			},
@@ -132,7 +132,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"bread-99999\",\n    \"description\": \"The bread of Hezikiel-99999\",\n    \"price\": 99\n}",
+					"raw": "{\n    \"title\": \"An updated product - 9999\",\n    \"description\": \"This is a updated product - 9999\",\n    \"price\": 99.99\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -140,7 +140,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/products/64afb6907fed6c67599aa834",
+					"raw": "http://localhost:4000/products/64afbd4e8e2dae322343a4bd",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -148,7 +148,7 @@
 					"port": "4000",
 					"path": [
 						"products",
-						"64afb6907fed6c67599aa834"
+						"64afbd4e8e2dae322343a4bd"
 					]
 				}
 			},
@@ -169,7 +169,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/products/64afa2faf67feeb99f752f25",
+					"raw": "http://localhost:4000/products/64afbd4e8e2dae322343a4bd",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -177,7 +177,7 @@
 					"port": "4000",
 					"path": [
 						"products",
-						"64afa2faf67feeb99f752f25"
+						"64afbd4e8e2dae322343a4bd"
 					]
 				}
 			},

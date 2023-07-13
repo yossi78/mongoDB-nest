@@ -20,21 +20,27 @@ let ProductsController = exports.ProductsController = class ProductsController {
         this.productsService = productsService;
     }
     async addProduct(prodTitle, prodDesc, prodPrice) {
+        console.log('ADD A NEW PRODUCT');
         const generatedId = await this.productsService.insertProduct(prodTitle, prodDesc, prodPrice);
         return { id: generatedId };
     }
     async getAllProducts() {
+        console.log('GET ALL PRODUCTS');
         const products = await this.productsService.getProducts();
+        console.log(products);
         return products;
     }
     getProduct(prodId) {
+        console.log('GET SINGLE PRODUCT');
         return this.productsService.getSingleProduct(prodId);
     }
     async updateProduct(prodId, prodTitle, prodDesc, prodPrice) {
+        console.log('UPDATE PRODUCT');
         await this.productsService.updateProduct(prodId, prodTitle, prodDesc, prodPrice);
         return null;
     }
     async removeProduct(prodId) {
+        console.log('REMOVE PRODUCT');
         await this.productsService.deleteProduct(prodId);
         return null;
     }
