@@ -30,10 +30,16 @@ let ProductsService = exports.ProductsService = class ProductsService {
         });
         const result = await newProduct.save();
         console.log(result);
-        return prodId;
+        return result.id;
     }
-    getProducts() {
-        return [...this.products];
+    async getProducts() {
+        const products = await this.productModel.find().exec();
+        return products.map((prod) => ({
+            id: prod.id,
+            title: prod.title,
+            description: prod.description,
+            price: prod.price
+        }));
     }
     getSingleProduct(productId) {
         const product = this.findProduct(productId)[0];

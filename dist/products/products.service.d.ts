@@ -5,7 +5,12 @@ export declare class ProductsService {
     private products;
     constructor(productModel: Model<Product>);
     insertProduct(title: string, desc: string, price: number): Promise<string>;
-    getProducts(): Product[];
+    getProducts(): Promise<{
+        id: any;
+        title: string;
+        description: string;
+        price: number;
+    }[]>;
     getSingleProduct(productId: string): {
         id: string;
         title: string;
