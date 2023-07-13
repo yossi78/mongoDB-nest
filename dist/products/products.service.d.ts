@@ -1,7 +1,10 @@
 import { Product } from './product.model';
+import { Model } from 'mongoose';
 export declare class ProductsService {
+    private productModel;
     private products;
-    insertProduct(title: string, desc: string, price: number): string;
+    constructor(productModel: Model<Product>);
+    insertProduct(title: string, desc: string, price: number): Promise<string>;
     getProducts(): Product[];
     getSingleProduct(productId: string): {
         id: string;
