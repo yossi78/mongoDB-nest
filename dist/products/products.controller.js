@@ -34,8 +34,8 @@ let ProductsController = exports.ProductsController = class ProductsController {
         await this.productsService.updateProduct(prodId, prodTitle, prodDesc, prodPrice);
         return null;
     }
-    removeProduct(prodId) {
-        this.productsService.deleteProduct(prodId);
+    async removeProduct(prodId) {
+        await this.productsService.deleteProduct(prodId);
         return null;
     }
 };
@@ -76,7 +76,7 @@ __decorate([
     __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "removeProduct", null);
 exports.ProductsController = ProductsController = __decorate([
     (0, common_1.Controller)('products'),

@@ -18,5 +18,5 @@ export declare class ProductsController {
         price: number;
     }>;
     updateProduct(prodId: string, prodTitle: string, prodDesc: string, prodPrice: number): Promise<any>;
-    removeProduct(prodId: string): any;
+    removeProduct(prodId: string): Promise<any>;
 }

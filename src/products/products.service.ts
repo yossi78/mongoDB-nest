@@ -67,9 +67,8 @@ export class ProductsService {
 
 
 
-  deleteProduct(prodId: string) {
-      const index = this.findProduct(prodId)[1];
-      this.products.splice(index, 1);
+  async deleteProduct(prodId: string) {
+      await this.productModel.deleteOne({_id:prodId}).exec();
   }
 
 

@@ -18,6 +18,6 @@ export declare class ProductsService {
         price: number;
     }>;
     updateProduct(productId: string, title: string, desc: string, price: number): Promise<void>;
-    deleteProduct(prodId: string): void;
+    deleteProduct(prodId: string): Promise<void>;
     private findProduct;
 }
