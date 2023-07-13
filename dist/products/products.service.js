@@ -65,6 +65,9 @@ let ProductsService = exports.ProductsService = class ProductsService {
     }
     async deleteProduct(prodId) {
         const result = await this.productModel.deleteOne({ _id: prodId }).exec();
+        if (result.deletedCount === 0) {
+            throw new common_1.NotFoundException('Could not find product !!');
+        }
         console.log(result);
     }
     async findProduct(id) {
