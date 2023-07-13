@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Milk\",\n    \"description\": \"The Milk of Tara\",\n    \"price\": 5\n}",
+					"raw": "{\n    \"title\": \"second\",\n    \"description\": \"The second test of Tara\",\n    \"price\": 2\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -80,7 +80,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/products/0.012328147486327046",
+					"raw": "http://localhost:4000/products/64afa2faf67feeb99f752f25",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -88,7 +88,7 @@
 					"port": "4000",
 					"path": [
 						"products",
-						"0.012328147486327046"
+						"64afa2faf67feeb99f752f25"
 					]
 				}
 			},
@@ -140,7 +140,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/products/0.7700487235769897",
+					"raw": "http://localhost:4000/products/64afb6907fed6c67599aa834",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -148,7 +148,7 @@
 					"port": "4000",
 					"path": [
 						"products",
-						"0.7700487235769897"
+						"64afb6907fed6c67599aa834"
 					]
 				}
 			},
@@ -169,7 +169,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/products/0.9418037577058498",
+					"raw": "http://localhost:4000/products/64afa2faf67feeb99f752f25",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -177,7 +177,7 @@
 					"port": "4000",
 					"path": [
 						"products",
-						"0.9418037577058498"
+						"64afa2faf67feeb99f752f25"
 					]
 				}
 			},
