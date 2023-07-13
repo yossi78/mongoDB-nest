@@ -11,12 +11,12 @@ export declare class ProductsController {
         description: string;
         price: number;
     }[]>;
-    getProduct(prodId: string): {
+    getProduct(prodId: string): Promise<{
         id: string;
         title: string;
         description: string;
         price: number;
-    };
-    updateProduct(prodId: string, prodTitle: string, prodDesc: string, prodPrice: number): any;
+    }>;
+    updateProduct(prodId: string, prodTitle: string, prodDesc: string, prodPrice: number): Promise<any>;
     removeProduct(prodId: string): any;
 }

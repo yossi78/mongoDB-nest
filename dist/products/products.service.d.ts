@@ -11,13 +11,13 @@ export declare class ProductsService {
         description: string;
         price: number;
     }[]>;
-    getSingleProduct(productId: string): {
+    getSingleProduct(productId: string): Promise<{
         id: string;
         title: string;
         description: string;
         price: number;
-    };
-    updateProduct(productId: string, title: string, desc: string, price: number): void;
+    }>;
+    updateProduct(productId: string, title: string, desc: string, price: number): Promise<void>;
     deleteProduct(prodId: string): void;
     private findProduct;
 }

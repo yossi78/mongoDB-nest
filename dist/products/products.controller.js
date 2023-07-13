@@ -30,8 +30,8 @@ let ProductsController = exports.ProductsController = class ProductsController {
     getProduct(prodId) {
         return this.productsService.getSingleProduct(prodId);
     }
-    updateProduct(prodId, prodTitle, prodDesc, prodPrice) {
-        this.productsService.updateProduct(prodId, prodTitle, prodDesc, prodPrice);
+    async updateProduct(prodId, prodTitle, prodDesc, prodPrice) {
+        await this.productsService.updateProduct(prodId, prodTitle, prodDesc, prodPrice);
         return null;
     }
     removeProduct(prodId) {
@@ -69,7 +69,7 @@ __decorate([
     __param(3, (0, common_1.Body)('price')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String, String, Number]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "updateProduct", null);
 __decorate([
     (0, common_1.Delete)(':id'),

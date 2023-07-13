@@ -41,13 +41,17 @@ let ProductsService = exports.ProductsService = class ProductsService {
             price: prod.price
         }));
     }
-    getSingleProduct(productId) {
-        const product = this.findProduct(productId)[0];
-        return { ...product };
+    async getSingleProduct(productId) {
+        const product = await this.findProduct(productId);
+        return {
+            id: product.id,
+            title: product.title,
+            description: product.description,
+            price: product.price
+        };
     }
-    updateProduct(productId, title, desc, price) {
-        const [product, index] = this.findProduct(productId);
-        const updatedProduct = { ...product };
+    async updateProduct(productId, title, desc, price) {
+        const updatedProduct = await this.findProduct(productId);
         if (title) {
             updatedProduct.title = title;
         }
@@ -57,19 +61,24 @@ let ProductsService = exports.ProductsService = class ProductsService {
         if (price) {
             updatedProduct.price = price;
         }
-        this.products[index] = updatedProduct;
+        updatedProduct.save();
     }
     deleteProduct(prodId) {
         const index = this.findProduct(prodId)[1];
         this.products.splice(index, 1);
     }
-    findProduct(id) {
-        const productIndex = this.products.findIndex(prod => prod.id === id);
-        const product = this.products[productIndex];
+    async findProduct(id) {
+        let product;
+        try {
+            product = await this.productModel.findById(id);
+        }
+        catch (error) {
+            throw new common_1.NotFoundException('Could not find product.');
+        }
         if (!product) {
             throw new common_1.NotFoundException('Could not find product.');
         }
-        return [product, productIndex];
+        return product;
     }
 };
 exports.ProductsService = ProductsService = __decorate([

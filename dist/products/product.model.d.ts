@@ -14,7 +14,7 @@ export declare const ProductSchema: mongoose.Schema<any, mongoose.Model<any, any
 } & {
     _id: mongoose.Types.ObjectId;
 }>;
-export interface Product {
+export interface Product extends mongoose.Document {
     id: string;
     title: string;
     description: string;
